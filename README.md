@@ -53,6 +53,7 @@ load_datasets(
     load_features=True                # Downloads precomputed music21 & jSymbolic features
 )
 ```
+> Note: The datasets are also publicly available on Hugging Face at https://huggingface.co/datasets/ai-forever/symurbench_datasets .
 
 ---
 
@@ -188,7 +189,7 @@ results_df.to_csv("results.csv")
 - 🔒 **Avoid data leakage**: Do not include test-set files in your training data to ensure fair and valid evaluation.
 - 🔄 **Reproducibility**: Use fixed random seeds and consistent preprocessing pipelines to make experiments reproducible.
 - 📁 **File paths**: Ensure paths in config files are correct and accessible.
-- 🧪 **Custom extractors**: You can implement your own `FeatureExtractor` subclass by inheriting from the base `FeatureExtractor` class and implementing the `extract` method.
+- 🧪 **Custom extractors**: You can implement your own `FeatureExtractor` subclass by inheriting from the base `FeatureExtractor` class and implementing the `extract_features_from_file` method.
 
 ## 7. Citation
 
